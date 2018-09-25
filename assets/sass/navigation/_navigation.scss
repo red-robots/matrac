@@ -1,0 +1,181 @@
+
+
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+	font-family: 'Carrois Gothic', sans-serif;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		margin: 0px 0 20px 0px;
+		text-indent: 0;
+		text-align: center;
+		
+
+		@media screen and (min-width: $tabwidth) {
+			border-top: 1px solid #ccc;
+			border-bottom: 4px solid $color-dark-blue;
+			margin: 20px 0 0 0px;
+		}
+
+		ul {
+			
+			
+
+			@media screen and (min-width: $tabwidth) {
+				float: left;
+				position: absolute;
+				top: 1.2em;
+				left: -999em;
+				z-index: 99999;
+				border-bottom: 0px solid $color-dark-blue;
+				border-top: 0px solid #ccc;
+			}
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				margin: 0;
+				text-align: center;
+				font-size: 18px;
+
+				@media screen and (min-width: $tabwidth) {
+					font-size: 12px;
+					text-align: left;
+				}
+				@media screen and (min-width: $deskwidth) {
+					font-size: 18px;
+				}
+
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				
+				
+				color: $color-dark-blue;
+				border-bottom: 0px solid #ededed;
+				display: block;
+				font-size: 11px;
+				line-height: 2.181818182;
+				padding: 8px 0px;
+				// width: 180px;
+				white-space: normal;
+
+				@media screen and (min-width: $tabwidth) {
+					padding: 8px 5px;
+					color: #fff;
+					background: rgba($color-dark-blue, .8);
+					width: 200px;
+				}
+				@media screen and (min-width: $deskwidth) {
+					padding: 8px 10px;
+				}
+
+			}
+
+			:hover > a,
+			.focus > a {
+				color: #fff;
+				background: rgba($color-dark-blue, 1);
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+	li {
+		// float: left;
+		position: relative;
+		display: inline-block;
+		text-decoration: none;
+		font-size: 18px;
+		
+		position: relative;
+		width: 100%;
+		text-align: center;
+
+		@media screen and (min-width: $tabwidth) {
+			width: auto;
+			font-size: 14px;
+			margin: 0px 5px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			width: auto;
+			font-size: 18px;
+			margin: 0px 20px;
+		}
+
+		&:hover > a,
+		&.focus > a {
+			color: #000;
+		}
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		border-bottom: 0;
+		color: $color-dark-blue;
+		text-transform: uppercase;
+		white-space: nowrap;
+		
+		padding: 15px 0 10px 0;
+
+		@media screen and (min-width: $tabwidth) {
+			padding: 8px 5px;
+
+		}
+		@media screen and (min-width: $deskwidth) {
+			padding: 15px 0 10px 0;
+		}
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	
+	.main-navigation ul {
+		display: block;
+	}
+}
+.menu-toggle {
+	display: block;
+	margin: 10px auto;
+	width: auto;
+	padding: 20px;
+	background-color: $color-dark-blue;
+	color: #fff;
+
+	@media screen and (min-width: $tabwidth) {
+		display: none;
+		
+	}
+}
