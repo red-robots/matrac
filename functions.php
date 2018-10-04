@@ -911,3 +911,8 @@ function remove_wp_logo( $wp_admin_bar ) {
 	$wp_admin_bar->remove_node( 'wp-logo' );
 	$wp_admin_bar->remove_node( 'site-name' );
 }
+if( function_exists('acf_add_options_page') ) {
+    
+    acf_add_options_page();
+    
+}

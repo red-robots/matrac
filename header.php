@@ -132,9 +132,9 @@ endif;
                </div><!-- top buttons -->
                     
              <?php else: ?>
-              <div class="topbtn">
+              <!-- <div class="topbtn">
                 <a target="_blank" href="http://www.mission-health.org/emergency.php">Learn more about Mission Health Trauma & Emergency Services</a>
-              </div>
+              </div> -->
             <?php endif; ?>
             
            

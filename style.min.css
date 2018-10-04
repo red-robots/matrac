@@ -126,7 +126,7 @@ a:hover{color:#f89a3d}
 .topbtn a{padding:20px 25px;display:block;background-color:#40465d;color:#fff}
 .message .bottombtn{width:auto;display:inline-block;margin:10px auto}
 .message .bottombtn a{padding:20px 25px;display:block;background-color:#40465d;color:#fff;font-size:14px}
-.message{width:90%;padding:30px 0;font-size:22px;line-height:1.2;margin:20px auto}
+.message{width:90%;padding:30px 0;font-size:22px;line-height:1.2;margin:20px auto;text-align:center}
 @media screen and (min-width:600px){.message{width:50%}
 }.header{width:100%;position:relative}
 @media screen and (min-width:1200px){.header{width:1045px}
