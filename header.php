@@ -204,7 +204,7 @@ endif;
 
           if('MATRAC' == $WhichSiteAreWeOn) {  // is is mhpc ?>
           <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'MATRAC', 'menu_class' => 'nav-menu' ) ); ?>
            <?php } elseif('SMAT' == $WhichSiteAreWeOn) {  // if is smat ?>
            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?></button>
         		<?php wp_nav_menu( array( 'theme_location' => 'smat', 'menu_class' => 'nav-menu' ) ); ?>
