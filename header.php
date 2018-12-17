@@ -30,8 +30,8 @@
 <![endif]-->
 <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' ); ?>/css/colorbox.css" />
 
-<link href='http://fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Sintony' rel='stylesheet' type='text/css'>
 
 
 <?php wp_head(); 
@@ -197,7 +197,12 @@ endif;
         
         <nav id="site-navigation" class="main-navigation" role="navigation">
 
-        	<?php if('MATRAC' == $WhichSiteAreWeOn) {  // is is mhpc ?>
+        	<?php 
+
+            echo '<!-- '.$WhichSiteAreWeOn.'-->';
+
+
+          if('MATRAC' == $WhichSiteAreWeOn) {  // is is mhpc ?>
           <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
            <?php } elseif('SMAT' == $WhichSiteAreWeOn) {  // if is smat ?>
