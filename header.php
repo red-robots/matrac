@@ -36,6 +36,14 @@
 
 <?php wp_head(); 
 
+$alert = get_field('alert_on', 'option');
+$alert = $alert[0];
+$alert_message = get_field('message', 'option');
+
+// echo '<pre>';
+// print_r($alert);
+// echo '</pre>';
+
 $site = $_REQUEST['site'];
 $postType = $_REQUEST['post_type'];
 if( $site != '' ) :
@@ -60,14 +68,14 @@ endif;
 }(document, 'script', 'facebook-jssdk'));</script>-->
 
 
-		<?php if('yes' == get_field('turn_alert_message_on', 'option') )  : ?>
+		<?php if( $alert == 'on' )  : ?>
         	<div id="alert">
             	<div id="alert-inside">
                     <div id="alert-title">
                         <?php the_field('alert_title','option'); ?>
                     </div><!-- alert title -->
                    <div id="alert-message">
-                    <?php the_field('alert_message','option'); ?>
+                    <?php echo $alert_message; ?>
                    </div><!--  alert message -->
            	</div><!-- alert -->
            </div><!-- alert -->
